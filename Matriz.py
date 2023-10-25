@@ -33,41 +33,18 @@ boton_2.place(x=500, y=230)
 
 ventana.mainloop()'''
 
-# Se crea una variable titulada como "R" y se designa como lista vacia, es decir =[] para el canal del rojo.
-R = []
 
-# La función "range(b)" genera una secuencia de números que va de 0 a b-1.
-# Se crea un ciclo for que almacena en la variable "indice" los valores que se tiene al realizar el recorrido por "range(10)".
-for matriz in range(8):
-   
-    # random.randint(a, b). Es una funcion que genera un número aleatorio de un interbalo de numeros.
-    # Cada vez que se recorre el ciclo for se agrega un numero aleatorio a la variable titulada como lista.
-    R.append(random.randint(0,255))
-    
-print (R)
-
-# Se crea una variable titulada como "G" y se designa como lista vacia, es decir =[] para el canal del Verde.
-G = []
-
-for matriz in range(8):
-   
-    # random.randint(a, b). Es una funcion que genera un número aleatorio de un interbalo de numeros.
-    # Cada vez que se recorre el ciclo for se agrega un numero aleatorio a la variable titulada como lista.
-    G.append(random.randint(0,255))
-    
-print (G)
-
-# Se crea una variable titulada como "B" y se designa como lista vacia, es decir =[] para el canal del Azul.
-B = []
-
-for matriz in range(8):
-   
-    # random.randint(a, b). Es una funcion que genera un número aleatorio de un interbalo de numeros.
-    # Cada vez que se recorre el ciclo for se agrega un numero aleatorio a la variable titulada como lista.
-    B.append(random.randint(0,255))
-    
-print (B)
-
-#Creamos una matriz con los datos continidos en mi lista R
-matriz = np.array(R)
+matriz = []
+for y in range(8):
+    fila=[]
+    for x in range(8):
+        color=[]
+        for _ in range(3):
+            numero=random.randint(0,255)
+            color.append(numero)
+        fila.append(color)
+    matriz.append(fila)
 print (matriz)
+
+for i in range(8):
+    print(matriz[i])
